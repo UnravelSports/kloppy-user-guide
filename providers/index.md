@@ -1,6 +1,6 @@
 # Supported Providers
 
-Kloppy provides support for positional tracking data, event data and other (manually tagged) data. Below is a list of all supported providers.
+Kloppy provides support for positional tracking data, event data and code data (manually tagged). Below is a list of all supported providers.
 
 ## Tracking Data
 
@@ -21,5 +21,5 @@ Kloppy provides support for positional tracking data, event data and other (manu
 - [WyScout](wyscout.ipynb)
 - [DataFactory](datafactory.ipynb)
 
-## Other
+## Code Data
 - [SportsCode](sportscode.ipynb)
