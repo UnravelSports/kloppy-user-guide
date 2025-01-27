@@ -1,8 +1,25 @@
-# Loading data
+# Supported Providers
 
-!!! example
+Kloppy provides support for positional tracking data, event data and other (manually tagged) data. Below is a list of all supported providers.
 
-    This page should give an overview of the data sources that are used in
-    soccer and supported by kloppy and introduce adatapter.
-    The next pages should explain how to load each of these datasets and give
-    an overview of the basic operations.
+## Tracking Data
+
+- [PFF FC](pff.ipynb)
+- [SecondSpectrum](secondspectrum.ipynb)
+- [SkillCorner](skillcorner.ipynb)
+- [Sportec](sportec.ipynb)
+- [StatsPerform](statsperform.ipynb)
+- [Tracab (CyronHego)](tracab.ipynb)
+- [Metrica](metrica.ipynb)
+- [HawkEye (2D)](hawkeye.ipynb) [soon]
+- [Signality](signality.ipynb) [soon]
+
+## Event Data
+- [StatsPerform (Opta)](statsperform.ipynb)
+- [StatsBomb](statsbomb.ipynb)
+- [Sportec](sportec.ipynb)
+- [WyScout](wyscout.ipynb)
+- [DataFactory](datafactory.ipynb)
+
+## Other
+- [SportsCode](sportscode.ipynb)
