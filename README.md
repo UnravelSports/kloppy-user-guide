@@ -29,17 +29,15 @@ Each vendor of soccer data uses its own unique format to describe the course of 
 
 ✅ Implemented  🟠 Not yet implemented 
 
-$^1$ Including 360 Freeze Frame Data
+$^1$ Includes 360 freeze frame data support
 
 More information on the supported events per provider can be found [here](broken).
-
-
 
 ## Main features
 ### Loading Data
 
 #### ▶️ Standardized Data
-Using **kloppy** will generate a standardized dataset (`EventDataset` or `TrackingDataset`). 
+Loading event or tracking dataw ith **kloppy** creates a standardized dataset and standardized meta data.
 
 #### ▶️ Load Public Datasets
 
@@ -133,7 +131,7 @@ F. Klaus - 76.7 minutes played
 etc..
 ```
 
-Combining this with some data frame operations allows us to compute "per 90" stats.
+Combining this with some data frame operations allows us to compute "per 90" stats, see [this example](broken).
 
 #### ▶️ Transformations
 **Kloppy** supports multiple different [coordinate systems](broken) and different [orientations](broken).
