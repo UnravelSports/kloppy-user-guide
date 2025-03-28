@@ -155,7 +155,6 @@ shots_transformed = shots.transform(
 
 #### ▶️ Custom Events
 
-
 <details>
     <summary> <b><i> Expand for a short explanations on Custom Events</i></b> </summary>
 <div style="display: flex; align-items: flex-start;">
@@ -186,7 +185,7 @@ class SportecShotEvent(ShotEvent):
             f"<Shot event_id='{self.event_id}' time='{self.time}' player='{self.player}' xg={self.xg} result='{self.result}'>"
         )
 
-class StatsPerformEventFactory(EventFactory):
+class SportecEventFactory(EventFactory):
     def build_shot(self, raw_event, **kwargs) -> ShotEvent:
         xg = raw_event['xG']
         
@@ -194,7 +193,7 @@ class StatsPerformEventFactory(EventFactory):
             xg = float(xg)
 
         return create_event(
-            StatsPerformShotEvent,
+            SportecShotEvent,
             xg=xg,
             raw_event=raw_event,
             **kwargs,
