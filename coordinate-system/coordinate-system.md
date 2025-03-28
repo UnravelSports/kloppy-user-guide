@@ -21,6 +21,27 @@ WyScout | [WyScoutCoordinateSystem](#origin-top-left--vertical-orientation-top-t
 
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
 
+## 🔄 Converting Between Systems
+Kloppy provides built-in functions to seamlessly convert between coordinate systems.
+
+For example, the following snippet allows you to convert data from StatsBombCoordinateSystem to MetricaCoordinateSystem.
+```python
+# Load the libraries
+from kloppy import statsbomb
+from kloppy.domain import MetricaCoordinateSystem
+
+# Load StatsBomb open event data
+dataset = statsbomb.load_open_data(
+    match_id=15946,
+    # Optional arguments
+    coordinates="statsbomb",
+)
+
+# Transform StatsBomb's coordinate system to SportVUCoordinateSystem
+dataset_transformed = dataset.transform(
+    to_coordinate_system=MetricaCoordinateSystem()
+)
+```
 
 ## 📖 Glossary  
 ### Vertical Orientation  
