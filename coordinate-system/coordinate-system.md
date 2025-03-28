@@ -7,7 +7,7 @@ Kloppy provides support for multiple coordinate systems for event and tracking d
 |-------------|-------------------|---------------|----------------------|------------|-----------|
 |Kloppy | [KloppyCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left| Top to Bottom|1|1
 Metrica | [MetricaCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left       | Top to Bottom |1|1
-HawkEye | [HawkEyeCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |?|?|
+HawkEye | [HawkEyeCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105|68|
 PFF | [PFFCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105|68
 SecondSpectrum | [SecondSpectrumCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center| Bottom to Top | 105|68
 SkillCorner | [SkillCornerCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top | 105|68
@@ -21,6 +21,11 @@ WyScout | [WyScoutCoordinateSystem](#origin-top-left--vertical-orientation-top-t
 SportVU | [SportVUCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |?|? 
 
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
+
+> **❗ Note:**  
+> Some providers measure pitch dimensions and include them in the metadata, while others assume fixed dimensions.  
+> This distinction is important for coordinate transformations, as some systems rely on predefined pitch sizes while others use actual measured values.  
+> When pitch dimensions are not provided, default assumptions may be applied. Always check with the data provider you are working with
 
 ## 🔄 Converting Between Systems
 Kloppy provides built-in functions to seamlessly convert between coordinate systems.
