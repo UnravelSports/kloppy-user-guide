@@ -18,6 +18,7 @@ Tracab | [TracabCoordinateSystem](#origin-center--vertical-orientation-bottom-to
 DataFactory | [DatafactoryCoordinateSystem](#origin-center--vertical-orientation-top-to-bottom) | Center     | Top to Bottom |?|?
 StatsBomb | [StatsBombCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |120|80 
 WyScout | [WyScoutCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |100|100 
+SportVU | [SportVUCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |?|? 
 
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
 
