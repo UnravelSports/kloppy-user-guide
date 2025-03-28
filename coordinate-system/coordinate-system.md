@@ -23,9 +23,7 @@ SportVU | [SportVUCoordinateSystem](#origin-top-left--vertical-orientation-top-t
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
 
 > **❗ Note:**  
-> Some providers measure pitch dimensions and include them in the metadata, while others assume fixed dimensions.  
-> This distinction is important for coordinate transformations, as some systems rely on predefined pitch sizes while others use actual measured values.  
-> When pitch dimensions are not provided, default assumptions may be applied. Always check with the data provider you are working with
+> Some providers measure pitch dimensions and include them in the metadata, while others assume fixed dimensions. This distinction is important for coordinate transformations, as some systems rely on predefined pitch sizes while others use actual measured values. Always check with the data provider you are working with
 
 ## 🔄 Converting Between Systems
 Kloppy provides built-in functions to seamlessly convert between coordinate systems.
