@@ -30,6 +30,7 @@ SportVU | [SportVUCoordinateSystem](#origin-top-left--vertical-orientation-top-t
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
 
 > ** $^1$ Note:**  This provider provides measured pitch dimensions and includes them in the metadata. This information is used to correctly set set the coordinate system and may deviate from 105 by 68.
+> 
 > ** $^2$ Note:**  HawkEye does not always provide measured pitch dimensions and meta data. When no meta data is provided pitch dimensions default to 105 by 68. 
 
 ## Glossary  
