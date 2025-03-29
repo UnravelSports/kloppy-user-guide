@@ -2,12 +2,13 @@
 
 Kloppy provides support for multiple coordinate systems for event and tracking data, each with different origins and axis directions, and provides built-in conversions to ensure accurate analysis and visualization across various data providers.
 
-- [Supported Providers](#supported-providers)
-- [Glossary](#glossary)
-  - [Vertical Orientation](#vertical-orientation)
-  - [Origin](#origin)
-  - [Pitch Diagrams](#pitch-diagrams)
-- [Converting Between Systems ](#converting-between-systems)
+- [Kloppy Coordinate Systems Guide](#kloppy-coordinate-systems-guide)
+  - [Supported Providers](#supported-providers)
+  - [Glossary](#glossary)
+    - [Vertical Orientation](#vertical-orientation)
+    - [Origin](#origin)
+    - [Pitch Diagrams](#pitch-diagrams)
+  - [Converting Between Systems](#converting-between-systems)
 
 ## Supported Providers
 | Provider    | Coordinate System | Origin        | Vertical Orientation |Pitch Length|Pitch Width|
@@ -44,17 +45,28 @@ Apart from the above data providers, Kloppy also provides support to create your
 - **Center** → Origin at the center of the field. 
 
 ### Pitch Diagrams
-#### Origin: Top Left | Vertical Orientation: Top to Bottom
-![Origin Top Left](imgs/origin_top_left.png)
-
-#### Origin: Bottom Left | Vertical Orientation: Bottom to Top
-![Origin Top Left](imgs/origin_bottom_left.png)
-
-#### Origin: Center | Vertical Orientation: Bottom to Top
-![Origin Top Left](imgs/origin_center_bottom_to_top.png)
-
-#### Origin: Center | Vertical Orientation: Top to Bottom
-![Origin Top Left](imgs/origin_center_top_to_bottom.png)
+<table>
+  <tr>
+    <td align="center">
+      <strong>Origin: Top Left <br> Vertical Orientation: Top to Bottom</strong><br>
+      <img src="imgs/origin_top_left.png" alt="Origin Top Left" width="300"/>
+    </td>
+    <td align="center">
+      <strong>Origin: Bottom Left <br> Vertical Orientation: Bottom to Top</strong><br>
+      <img src="imgs/origin_bottom_left.png" alt="Origin Bottom Left" width="300"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>Origin: Center <br> Vertical Orientation: Bottom to Top</strong><br>
+      <img src="imgs/origin_center_bottom_to_top.png" alt="Origin Center Bottom to Top" width="300"/>
+    </td>
+    <td align="center">
+      <strong>Origin: Center <br> Vertical Orientation: Top to Bottom</strong><br>
+      <img src="imgs/origin_center_top_to_bottom.png" alt="Origin Center Top to Bottom" width="300"/>
+    </td>
+  </tr>
+</table>
 
 ## Converting Between Systems
 Kloppy provides built-in functions to seamlessly convert between coordinate systems.
