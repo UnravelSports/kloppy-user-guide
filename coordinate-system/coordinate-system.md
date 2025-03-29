@@ -49,21 +49,21 @@ Apart from the above data providers, Kloppy also provides support to create your
   <tr>
     <td align="center">
       <strong>Origin: Top Left <br> Vertical Orientation: Top to Bottom</strong><br>
-      <img src="imgs/origin_top_left.png" alt="Origin Top Left" width="300"/>
+      <img src="imgs/origin_top_left.png" alt="Origin Top Left" width="400"/>
     </td>
     <td align="center">
       <strong>Origin: Bottom Left <br> Vertical Orientation: Bottom to Top</strong><br>
-      <img src="imgs/origin_bottom_left.png" alt="Origin Bottom Left" width="300"/>
+      <img src="imgs/origin_bottom_left.png" alt="Origin Bottom Left" width="400"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <strong>Origin: Center <br> Vertical Orientation: Bottom to Top</strong><br>
-      <img src="imgs/origin_center_bottom_to_top.png" alt="Origin Center Bottom to Top" width="300"/>
+      <img src="imgs/origin_center_bottom_to_top.png" alt="Origin Center Bottom to Top" width="400"/>
     </td>
     <td align="center">
       <strong>Origin: Center <br> Vertical Orientation: Top to Bottom</strong><br>
-      <img src="imgs/origin_center_top_to_bottom.png" alt="Origin Center Top to Bottom" width="300"/>
+      <img src="imgs/origin_center_top_to_bottom.png" alt="Origin Center Top to Bottom" width="400"/>
     </td>
   </tr>
 </table>
