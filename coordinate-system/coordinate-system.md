@@ -5,8 +5,8 @@ Kloppy provides support for multiple coordinate systems for event and tracking d
 - [Kloppy Coordinate Systems Guide](#kloppy-coordinate-systems-guide)
   - [Supported Providers](#supported-providers)
   - [Glossary](#glossary)
-    - [Vertical Orientation](#vertical-orientation)
     - [Origin](#origin)
+    - [Vertical Orientation](#vertical-orientation)
     - [Pitch Diagrams](#pitch-diagrams)
   - [Converting Between Systems](#converting-between-systems)
 
@@ -35,14 +35,16 @@ Apart from the above data providers, Kloppy also provides support to create your
 > ** HawkEye does not always provide measured pitch dimensions and meta data. When no meta data is provided pitch dimensions default to 105 by 68. 
 
 ## Glossary  
-### Vertical Orientation  
-- **Top to Bottom** → The Y-axis increases as you move from the top to the bottom of the pitch.  
-- **Bottom to Top** → The Y-axis decreases as you move from the top to the bottom of the pitch.  
-
 ### Origin  
 - **Top Left** → Origin at the top-left corner of the field.  
 - **Bottom Left** → Origin at the bottom-left corner of the field.  
 - **Center** → Origin at the center of the field. 
+- 
+### Vertical Orientation  
+- **Top to Bottom** → The Y-axis increases as you move from the top to the bottom of the pitch.  
+- **Bottom to Top** → The Y-axis decreases as you move from the top to the bottom of the pitch.  
+
+
 
 ### Pitch Diagrams
 <table>
