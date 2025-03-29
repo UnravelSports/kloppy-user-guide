@@ -13,20 +13,20 @@ Kloppy provides support for multiple coordinate systems for event and tracking d
 ## Supported Providers
 | Provider    | Coordinate System | Origin        | Vertical Orientation |Pitch Length|Pitch Width|
 |-------------|-------------------|---------------|----------------------|------------|-----------|
-|Kloppy | [KloppyCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left| Top to Bottom|1|1
-Metrica | [MetricaCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left       | Top to Bottom |1|1
-HawkEye | [HawkEyeCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105**|68|
-PFF | [PFFCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105*|68
-SecondSpectrum | [SecondSpectrumCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center| Bottom to Top | 105*|68
-SkillCorner | [SkillCornerCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top | 105*|68
+|Kloppy | KloppyCoordinateSystem| Top Left| Top to Bottom|1|1
+Metrica | MetricaCoordinateSystem | Top Left       | Top to Bottom |1|1
+HawkEye | HawkEyeCoordinateSystem | Center       | Bottom to Top |105**|68|
+PFF | PFFCoordinateSystem| Center       | Bottom to Top |105*|68
+SecondSpectrum | SecondSpectrumCoordinateSystem | Center| Bottom to Top | 105*|68
+SkillCorner | SkillCornerCoordinateSystem | Center       | Bottom to Top | 105*|68
 Sportec Event Data | SportecEventDataCoordinateSystem |?|?|?|?
-Sportec Tracking Data | [SportecTrackingDataCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center     | Bottom to Top | 105* | 68 
-Opta | [OptaCoordinateSystem](#origin-bottom-left--vertical-orientation-bottom-to-top) | Bottom Left     | Bottom to Top |100|100
-Tracab | [TracabCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center     | Bottom to Top | 105* | 68 
-DataFactory | [DatafactoryCoordinateSystem](#origin-center--vertical-orientation-top-to-bottom) | Center     | Top to Bottom |?|?
-StatsBomb | [StatsBombCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |120|80 
-WyScout | [WyScoutCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |100|100 
-SportVU | [SportVUCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |?|? 
+Sportec Tracking Data | SportecTrackingDataCoordinateSystem | Center     | Bottom to Top | 105* | 68 
+Opta | OptaCoordinateSystem | Bottom Left     | Bottom to Top |100|100
+Tracab | TracabCoordinateSystem | Center     | Bottom to Top | 105* | 68 
+DataFactory | DatafactoryCoordinateSystem | Center     | Top to Bottom |?|?
+StatsBomb | StatsBombCoordinateSystem | Top Left     | Top to Bottom |120|80 
+WyScout | WyScoutCoordinateSystem | Top Left     | Top to Bottom |100|100 
+SportVU | SportVUCoordinateSystem | Top Left     | Top to Bottom |?|? 
 
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
 
