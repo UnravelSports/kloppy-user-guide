@@ -14,14 +14,14 @@ Kloppy provides support for multiple coordinate systems for event and tracking d
 |-------------|-------------------|---------------|----------------------|------------|-----------|
 |Kloppy | [KloppyCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left| Top to Bottom|1|1
 Metrica | [MetricaCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left       | Top to Bottom |1|1
-HawkEye | [HawkEyeCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105$^2$|68|
-PFF | [PFFCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105$^1$|68
-SecondSpectrum | [SecondSpectrumCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center| Bottom to Top | 105 $^1$|68
-SkillCorner | [SkillCornerCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top | 105$^1$|68
+HawkEye | [HawkEyeCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105**|68|
+PFF | [PFFCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top |105*|68
+SecondSpectrum | [SecondSpectrumCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center| Bottom to Top | 105*|68
+SkillCorner | [SkillCornerCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center       | Bottom to Top | 105*|68
 Sportec Event Data | SportecEventDataCoordinateSystem |?|?|?|?
-Sportec Tracking Data | [SportecTrackingDataCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center     | Bottom to Top | 105$^1$ | 68 
+Sportec Tracking Data | [SportecTrackingDataCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center     | Bottom to Top | 105* | 68 
 Opta | [OptaCoordinateSystem](#origin-bottom-left--vertical-orientation-bottom-to-top) | Bottom Left     | Bottom to Top |100|100
-Tracab | [TracabCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center     | Bottom to Top | 105$^1$ | 68 
+Tracab | [TracabCoordinateSystem](#origin-center--vertical-orientation-bottom-to-top) | Center     | Bottom to Top | 105* | 68 
 DataFactory | [DatafactoryCoordinateSystem](#origin-center--vertical-orientation-top-to-bottom) | Center     | Top to Bottom |?|?
 StatsBomb | [StatsBombCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |120|80 
 WyScout | [WyScoutCoordinateSystem](#origin-top-left--vertical-orientation-top-to-bottom) | Top Left     | Top to Bottom |100|100 
@@ -29,9 +29,9 @@ SportVU | [SportVUCoordinateSystem](#origin-top-left--vertical-orientation-top-t
 
 Apart from the above data providers, Kloppy also provides support to create your custom coordinate system using `CustomCoordinateSystem`.
 
-> ** $^1$ Note:**  This provider provides measured pitch dimensions and includes them in the metadata. This information is used to correctly set set the coordinate system and may deviate from 105 by 68.
+> *  This provider provides measured pitch dimensions and includes them in the metadata. This information is used to correctly set set the coordinate system and may deviate from 105 by 68.
 > 
-> ** $^2$ Note:**  HawkEye does not always provide measured pitch dimensions and meta data. When no meta data is provided pitch dimensions default to 105 by 68. 
+> ** HawkEye does not always provide measured pitch dimensions and meta data. When no meta data is provided pitch dimensions default to 105 by 68. 
 
 ## Glossary  
 ### Vertical Orientation  
