@@ -42,7 +42,7 @@ More information on the supported events per provider can be found [here](broken
 - [**Filtering**]()
 - [**Transformation**]()
 - [**To DataFrame** (with Polars or Pandas)]()
-- [**Aggregation**]()
+- [**Aggregation**](how-to-guide/aggregations.ipynb)
 - [**Custom Events**]()
 - [**Pattern Matching**]()
 
