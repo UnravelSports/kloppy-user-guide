@@ -15,19 +15,19 @@ The creation of these standardized datasets is called **"deserialization"**.
 ☕ **Kloppy** is powered by [PySport](https://pysport.org/)  (non-profit, RSIN: 866294211). Consider [contributing](#contributing-to-kloppy) or [donating](https://pysport.org/) to ensure its longevity!
 
 ## Supported Providers
-| Provider | Event | Tracking | Public Data | Example(s) |
-|----------|:-------:|:----------:|:---------------------:| ---------------------|
-| Hawkeye (2D) |  | ✅ |  |  |
-| Metrica | ✅ | ✅ | ✅ |  |
-| [PFF](providers/pff.ipynb) | 🟠 | ✅ | [🔗](https://drive.google.com/drive/u/0/folders/1_a_q1e9CXeEPJ3GdCv_3-rNO3gPqacfa) | |
-| SecondSpectrum | [PR #437](https://github.com/PySport/kloppy/pull/437) | ✅ |  |  |
-| SkillCorner |  | ✅ | ✅ |  |
-| Sportec | ✅ | ✅ | ✅ |  |
-| StatsPerform / Opta | ✅ | ✅ |  |  |
-| Tracab |  | ✅ |  |  |
-| DataFactory | ✅ |  |  |  |
-| StatsBomb | ✅ $^1$ |  | ✅ $^1$ |  |
-| WyScout | ✅ |  | ✅ |  |
+| Provider | Event | Tracking | Public Data | 
+|----------|:-------:|:----------:|:---------------------:| 
+| Hawkeye (2D) |  | ✅ |  |  
+| Metrica | ✅ | ✅ | ✅ |  
+| [PFF](providers/pff.ipynb) | 🟠 | ✅ | [🔗](https://drive.google.com/drive/u/0/folders/1_a_q1e9CXeEPJ3GdCv_3-rNO3gPqacfa) | 
+| SecondSpectrum | [PR #437](https://github.com/PySport/kloppy/pull/437) | ✅ |  |  
+| SkillCorner |  | ✅ | ✅ |  
+| Sportec | ✅ | ✅ | ✅ |  
+| StatsPerform / Opta | ✅ | ✅ |  |  
+| Tracab |  | ✅ |  |  
+| DataFactory | ✅ |  |  |  
+| StatsBomb | ✅ $^1$ |  | ✅ $^1$ |  
+| WyScout | ✅ |  | ✅ |  
 
 ✅ Implemented  🟠 Not yet implemented 
 
@@ -36,6 +36,7 @@ $^1$ Includes 360 freeze frame data support
 More information on the supported events per provider can be found [here](broken).
 
 ## Main features
+- [**Getting Started with Football Analysis**](getting-started/getting-started.ipynb)
 - [**Load and Standardize Event Data**]()
 - [**Load and Standardize Tracking Data**]()
 - [**Standardized Meta Data**]()
@@ -46,7 +47,7 @@ More information on the supported events per provider can be found [here](broken
 - [**Custom Events**]()
 - [**Pattern Matching**]()
 
-#### ▶️ Quick Start
+## Quick Start
 
 There are multiple providers that offer public / free data. Loading this data is directly supported within kloppy. 
 
