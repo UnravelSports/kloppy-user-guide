@@ -77,6 +77,9 @@ event_types:
       sportec:
         status: parsed
         implementation: event type 'Pass' or 'Cross'
+      metrica_json:
+        status: parsed
+        implementation: event type 1/'PASS'
     attributes:
       receive_timestamp:
         providers:
@@ -86,6 +89,9 @@ event_types:
           sportec:
             status: not implemented
             implementation: null
+          metrica_json:
+            status: parsed
+            implementation: time difference between event's end time and start of period
       receiver_coordinates:
         providers:
           statsbomb:
@@ -94,6 +100,9 @@ event_types:
           sportec: 
             status: parsed
             implementation: X/Y-Source-Position of subsequent event
+          metrica_json:
+            status: parsed
+            implementation: value of 'event.end' field
       receiver_player:
         providers:
           statsbomb:
@@ -102,11 +111,16 @@ event_types:
           sportec:
             status: parsed
             implementation: value of 'Recipient' field
+          metrica_json:
+            status: parsed
+            implementation: value of 'event.to' field
       result:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: parsed
+          metrica_json:
             status: parsed
         values:
           COMPLETE:
@@ -117,6 +131,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: successfullyCompleted or successful from [Play / Evaluation]
+              metrica_json:
+                status: parsed
+                implementation: outcome 1/'COMPLETE'
           INCOMPLETE:
             providers:
               statsbomb:
@@ -125,6 +142,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: if not successfullyCompleted or successful (unsuccessful) [Play / Evaluation]
+              metrica_json:
+                status: parsed
+                implementation: outcome 7/'INCOMPLETE'
           OUT:
             providers:
               statsbomb:
@@ -133,6 +153,9 @@ event_types:
               sportec:
                 status: inferred
                 implementation: When action is SET_PIECE, and previous action was pass, set pass outcome to unsuccessful 
+              metrica_json:
+                status: parsed
+                implementation: outcome 6/'OUT'
           OFFSIDE:
             providers:
               statsbomb:
@@ -141,6 +164,9 @@ event_types:
               sportec:
                 status: not supported
                 implementation: null
+              metrica_json:
+                status: parsed
+                implementation: outcome 16/'OFFSIDE'
   kloppy.domain.ShotEvent:
     providers:
       statsbomb:
@@ -158,6 +184,9 @@ event_types:
       sportec:
         status: parsed
         implementation: event type 'ShotWide' or 'SavedShot' or 'BlockedShot' or 'ShotWoodWork' or 'OtherShot' or 'SuccessfulShot' or 'OwnGoal'
+      metrica_json:
+        status: parsed
+        implementation: event type 2/'SHOT'
     attributes:
       result_coordinates:
         providers:
@@ -167,11 +196,16 @@ event_types:
           sportec:
             status: not implemented
             implementation: null
+          metrica_json:
+            status: not implemented
+            implementation: null
       result:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: parsed
+          metrica_json:
             status: parsed
         values:
           GOAL:
@@ -182,6 +216,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: outcome SuccessfulShot
+              metrica_json:
+                status: parsed
+                implementation: outcome 30/'GOAL'
           OFF_TARGET:
             providers:
               statsbomb:
@@ -190,6 +227,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: outcome ShotWide
+              metrica_json:
+                status: parsed
+                implementation: outcome 29/'OFF TARGET'
           POST:
             providers:
               statsbomb:
@@ -198,6 +238,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: outcome ShotWoodWork
+              metrica_json:
+                status: parsed
+                implementation: outcome 27/'POST'
           BLOCKED:
             providers:
               statsbomb:
@@ -206,6 +249,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: outcome BlockedShot
+              metrica_json:
+                status: parsed
+                implementation: outcome 25/'BLOCKED'
           SAVED:
             providers:
               statsbomb:
@@ -214,6 +260,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: outcome SavedShot
+              metrica_json:
+                status: parsed
+                implementation: outcome 26/'SAVED'
           OWN_GOAL:
             providers:
               statsbomb:
@@ -222,6 +271,9 @@ event_types:
               sportec:
                 status: parsed
                 implementation: outcome OwnGoal
+              metrica_json:
+                status: not implemented
+                implementation: null
   kloppy.domain.TakeOnEvent:
     providers:
       statsbomb:
@@ -238,10 +290,15 @@ event_types:
       sportec:
         status: not supported
         implementation: null
+      metrica_json:
+        status: parsed
+        implementation: event type 45/'DRIBBLE'
     attributes:
       result:
         providers:
           statsbomb:
+            status: parsed
+          metrica_json:
             status: parsed
         values:
           COMPLETE:
@@ -249,16 +306,25 @@ event_types:
               statsbomb:
                 status: parsed
                 implementation: outcome 8/'Complete'
+              metrica_json:
+                status: parsed
+                implementation: outcome 48/'WON'
           INCOMPLETE:
             providers:
               statsbomb:
                 status: parsed
                 implementation: outcome 9/'Incomplete' and dribble has no related event of type 4/'Duel' with outcome 14/'Lost Out' or 17/'Success Out'
+              metrica_json:
+                status: parsed
+                implementation: outcome 49/'LOST'
           OUT:
             providers:
               statsbomb:
                 status: parsed
                 implementation: outcome 9/'Incomplete' and dribble has related event of type 4/'Duel' with outcome 14/'Lost Out' or 17/'Success Out'
+              metrica_json:
+                status: not supported
+                implementation: null
   kloppy.domain.CarryEvent:
     providers:
       statsbomb:
@@ -270,20 +336,31 @@ event_types:
       sportec:
         status: not implemented
         implementation: null
+      metrica_json:
+        status: parsed
+        implementation: event type 10/'CARRY'
     attributes:
       end_timestamp:
         providers:
           statsbomb:
             status: parsed
             implementation: sum of 'timestamp' and 'duration' fields
+          metrica_json:
+            status: parsed
+            implementation: time difference between event's end time and start of period
       end_coordinates:
         providers:
           statsbomb:
             status: parsed
             implementation: value of 'carry.end_location' field
+          metrica_json:
+            status: parsed
+            implementation: value of 'event.end' field
       result:
         providers:
           statsbomb:
+            status: parsed
+          metrica_json:
             status: parsed
         values:
           COMPLETE:
@@ -291,9 +368,14 @@ event_types:
               statsbomb:
                 status: parsed
                 implementation: all events of type 43/'Carry'
+              metrica_json:
+                status: parsed
+                implementation: all events of type 10/'CARRY'
           INCOMPLETE:
             providers:
               statsbomb:
+                status: not supported
+              metrica_json:
                 status: not supported
   kloppy.domain.ClearanceEvent:
     providers:
@@ -309,10 +391,10 @@ event_types:
       wyscout_v3:
         status: parsed
         implementation: primary event type 'clearance'
-      statsperform:
-        status: not supported
-        implementation: null
       sportec:
+        status: not implemented
+        implementation: null
+      metrica_json:
         status: not implemented
         implementation: null
   kloppy.domain.InterceptionEvent:
@@ -330,6 +412,9 @@ event_types:
         status: parsed
         implementation: primary event type 'interception'
       sportec:
+        status: not implemented
+        implementation: null
+      metrica_json:
         status: not implemented
         implementation: null
     attributes:
@@ -370,6 +455,9 @@ event_types:
       sportec:
         status: not supported
         implementation: null
+      metrica_json:
+        status: not supported
+        implementation: null
     attributes:
       result:
         providers:
@@ -407,6 +495,9 @@ event_types:
       sportec:
         status: parsed
         implementation: event type Substitution
+      metrica_json:
+        status: not supported
+        implementation: null
     attributes:
       replacement_player:
         providers:
@@ -430,6 +521,9 @@ event_types:
       sportec:
         status: parsed
         implementation: event type 'Caution'
+      metrica_json:
+        status: not implemented
+        implementation: null
     attributes:
       card_type:
         providers:
@@ -468,6 +562,8 @@ event_types:
         status: not implemented
       sportec:
         status: unknown
+      metrica_json:
+        status: unknown
   kloppy.domain.PlayerOffEvent:
     providers:
       statsbomb:
@@ -480,6 +576,8 @@ event_types:
       wyscout_v3:
         status: not implemented
       sportec:
+        status: unknown
+      metrica_json:
         status: unknown
   kloppy.domain.RecoveryEvent:
     providers:
@@ -496,6 +594,9 @@ event_types:
         status: not implemented
       sportec:
         status: unknown
+      metrica_json:
+        status: parsed
+        implementation: event type 3/'RECOVERY'
   kloppy.domain.MiscontrolEvent:
     providers:
       statsbomb:
@@ -511,6 +612,9 @@ event_types:
         implementation: subevent 72/'Touch' with tag 1302
       sportec:
         status: unknown
+      metrica_json:
+        status: not supported
+        implementation: null
   kloppy.domain.BallOutEvent:
     providers:
       statsbomb:
@@ -527,6 +631,9 @@ event_types:
       sportec:
         status: unknown
         implementation: null
+      metrica_json:
+        status: inferred
+        implementation: checks if the event ended out of the field and adds a synthetic out event
   kloppy.domain.FoulCommittedEvent:
     providers:
       statsbomb:
@@ -544,6 +651,9 @@ event_types:
       sportec:
         status: parsed
         implementation: event type 'Foul'
+      metrica_json:
+        status: parsed
+        implementation: event type 4/'FAULT RECEIVED'
   kloppy.domain.GoalkeeperEvent:
     providers:
       statsbomb:
@@ -561,12 +671,18 @@ event_types:
       sportec:
         status: unknown
         implementation: null
+      metrica_json:
+        status: not supported
+        implementation: null
   kloppy.domain.PressureEvent:
     providers:
       statsbomb:
         status: parsed
         implementation: event type 17/'Pressure'
       sportec:
+        status: not supported
+        implementation: null
+      metrica_json:
         status: not supported
         implementation: null
   kloppy.domain.FormationChangeEvent:
@@ -584,6 +700,9 @@ event_types:
         status: parsed
         implementation: parsed out of 'formations' information
       sportec:
+        status: not supported
+        implementation: null
+      metrica_json:
         status: not supported
         implementation: null
     attributes:
@@ -604,6 +723,7 @@ qualifiers:
         status: parsed
       sportec:
         status: parsed
+      metrica_json: parsed
     values:
       CROSS:
         providers:
@@ -611,23 +731,31 @@ qualifiers:
             status: parsed
           sportec:
             status: parsed
+          metrica_json:
+            status: not implemented
       HAND_PASS:
         providers:
           statsbomb:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: unknown
       HEAD_PASS:
         providers:
           statsbomb:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: parsed
       HIGH_PASS:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: not supported
+          metrica_json:
             status: not supported
       LAUNCH:
         providers:
@@ -635,11 +763,15 @@ qualifiers:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: not supported
       SIMPLE_PASS:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: not supported
+          metrica_json:
             status: not supported
       SMART_PASS:
         providers:
@@ -647,11 +779,15 @@ qualifiers:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: not supported
       LONG_BALL:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: not supported
+          metrica_json:
             status: not supported
       THROUGH_BALL:
         providers:
@@ -659,16 +795,22 @@ qualifiers:
             status: parsed
           sportec:
             status: not implemented
+          metrica_json:
+            status: not supported
       CHIPPED_PASS:
         providers:
           statsbomb:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: not supported
       FLICK_ON:
         providers:
           statsbomb:
             status: parsed
+          metrica_json:
+            status: not supported
       ASSIST:
         providers:
           statsbomb:
@@ -693,6 +835,8 @@ qualifiers:
         status: parsed
       sportec:
         status: parsed
+      metrica_json:
+        status: parsed
     values:
       RIGHT_FOOT:
         providers:
@@ -701,6 +845,8 @@ qualifiers:
           sportec:
             status: parsed
             implementation: leftLeg
+          metrica_json:
+            status: unknown
       LEFT_FOOT:
         providers:
           statsbomb:
@@ -708,11 +854,15 @@ qualifiers:
           sportec:
             status: parsed
             implementation: rightLeg
+          metrica_json:
+            status: unknown
       HEAD:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: parsed
+          metrica_json:
             status: parsed
       OTHER:
         providers:
@@ -720,11 +870,15 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: unknown
       HEAD_OTHER:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: unknown
+          metrica_json:
             status: unknown
       BOTH_HANDS:
         providers:
@@ -732,11 +886,15 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: unknown
       CHEST:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: unknown
+          metrica_json:
             status: unknown
       LEFT_HAND:
         providers:
@@ -744,11 +902,15 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: unknown
       RIGHT_HAND:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: unknown
+          metrica_json:
             status: unknown
       DROP_KICK:
         providers:
@@ -756,11 +918,15 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: unknown
       KEEPER_ARM:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: unknown
+          metrica_json:
             status: unknown
       NO_TOUCH:
         providers:
@@ -768,12 +934,16 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: unknown
   kloppy.domain.CardQualifier:
     providers:
       statsbomb:
         status: parsed
       sportec:
         status: not supported
+      metrica_json:
+          status: not implemented
     values:
       FIRST_YELLOW:
         providers:
@@ -781,30 +951,41 @@ qualifiers:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: inferred
+            implementation: subtype 40/'YELLOW'
       SECOND_YELLOW:
         providers:
           statsbomb:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: unknown
       RED:
         providers:
           statsbomb:
             status: parsed
           sportec:
             status: not supported
+          metrica_json:
+            status: parsed
   kloppy.domain.CounterAttackQualifier:
     providers:
       statsbomb:
         status: parsed
       sportec:
         status: not implemented
+      metrica_json:
+        status: not supported
     values: []
   kloppy.domain.DuelQualifier:
     providers:
       statsbomb:
         status: parsed
       sportec:
+        status: unknown
+      metrica_json:
         status: unknown
     values:
       AERIAL:
@@ -813,17 +994,23 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: not implemented
       GROUND:
         providers:
           statsbomb:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: not implemented
       LOOSE_BALL:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: unknown
+          metrica_json:
             status: unknown
       SLIDING_TACKLE:
         providers:
@@ -831,12 +1018,16 @@ qualifiers:
             status: parsed
           sportec:
             status: unknown
+          metrica_json:
+            status: unknown
   kloppy.domain.GoalkeeperQualifier:
     providers:
       statsbomb:
         status: parsed
       sportec:
         status: parsed
+      metrica_json:
+        status: unknown
     values:
       SAVE:
         providers:
@@ -886,6 +1077,8 @@ qualifiers:
         status: parsed
       sportec:
         status: parsed
+      metrica_json:
+        status: parsed
     values:
       GOAL_KICK:
         providers:
@@ -893,11 +1086,15 @@ qualifiers:
             status: parsed
           sportec:
             status: parsed
+          metrica_json:
+            status: parsed
       FREE_KICK:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: parsed
+          metrica_json:
             status: parsed
       THROW_IN:
         providers:
@@ -905,11 +1102,15 @@ qualifiers:
             status: parsed
           sportec:
             status: parsed
+          metrica_json:
+            status: parsed
       CORNER_KICK:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: parsed
+          metrica_json:
             status: parsed
       PENALTY:
         providers:
@@ -917,9 +1118,13 @@ qualifiers:
             status: parsed
           sportec:
             status: parsed
+          metrica_json:
+            status: parsed
       KICK_OFF:
         providers:
           statsbomb:
             status: parsed
           sportec:
+            status: parsed
+          metrica_json:
             status: parsed
