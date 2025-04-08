@@ -18,17 +18,17 @@ The creation of these standardized datasets is called **"deserialization"**.
 | Provider | Event | Tracking | Public Data | 
 |----------|:-------:|:----------:|:---------------------:| 
 | [Hawkeye (2D)](user-guide/loading/hawkeye.ipynb) |  | ✅ |  |  
-| [Metrica](user-guide/loading/metrica.ipynb) | ✅ | ✅ | ✅ |  
+| [Metrica](user-guide/loading/metrica.ipynb) | ✅ | ✅ | [🔗](https://github.com/metrica-sports/sample-data) |  
 | [PFF](user-guide/loading/pff.ipynb) | 🟠 | ✅ | [🔗](https://drive.google.com/drive/u/0/folders/1_a_q1e9CXeEPJ3GdCv_3-rNO3gPqacfa) | 
 | [SecondSpectrum](user-guide/loading/secondspectrum.ipynb) | [PR #437](https://github.com/PySport/kloppy/pull/437) | ✅ |  |  
 | [Signality](user-guide/loading/signality.ipynb) |  | ✅ |  |  
-| [SkillCorner](user-guide/loading/skillcorner.ipynb) |  | ✅ | ✅ |  
-| [Sportec](user-guide/loading/sportec.ipynb) | ✅ | ✅ | ✅ |  
+| [SkillCorner](user-guide/loading/skillcorner.ipynb) |  | ✅ | [🔗](https://github.com/SkillCorner/opendata) |  
+| [Sportec](user-guide/loading/sportec.ipynb) | ✅ | ✅ | [🔗](https://www.nature.com/articles/s41597-025-04505-y) |  
 | [StatsPerform / Opta](user-guide/loading/statsperform.ipynb) | ✅ | ✅ |  |  
 | [Tracab](user-guide/loading/tracab.ipynb) |  | ✅ |  |  
 | [DataFactory](user-guide/loading/datafactory.ipynb) | ✅ |  |  |  
-| [StatsBomb](user-guide/loading/statsbomb.ipynb) | ✅ $^1$ |  | ✅ $^1$ |  
-| [WyScout](user-guide/loading/wyscout.ipynb) | ✅ |  | ✅ |  
+| [StatsBomb](user-guide/loading/statsbomb.ipynb) | ✅ $^1$ |  | [🔗 $^1$](https://github.com/statsbomb/open-data) |  
+| [WyScout](user-guide/loading/wyscout.ipynb) | ✅ |  | [🔗](https://github.com/koenvo/wyscout-soccer-match-event-dataset) |  
 
 ✅ Implemented  🟠 Not yet implemented 
 
