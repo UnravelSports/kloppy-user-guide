@@ -27,7 +27,7 @@ The creation of these standardized datasets is called **"deserialization"**.
 | [StatsPerform / Opta](user-guide/loading/statsperform.ipynb) | ✅ | ✅ |  |  
 | [Tracab](user-guide/loading/tracab.ipynb) |  | ✅ |  |  
 | [DataFactory](user-guide/loading/datafactory.ipynb) | ✅ |  |  |  
-| [StatsBomb](user-guide/loading/statsbomb.ipynb) | ✅ $^1$ |  | [🔗 $^1$](https://github.com/statsbomb/open-data) |  
+| [StatsBomb](user-guide/loading/statsbomb.ipynb) | ✅ $^1$ |  | [🔗](https://github.com/statsbomb/open-data) $^1$ |  
 | [WyScout](user-guide/loading/wyscout.ipynb) | ✅ |  | [🔗](https://github.com/koenvo/wyscout-soccer-match-event-dataset) |  
 
 ✅ Implemented  🟠 Not yet implemented 
