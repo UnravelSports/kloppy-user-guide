@@ -21,6 +21,7 @@ The creation of these standardized datasets is called **"deserialization"**.
 | Metrica | ✅ | ✅ | ✅ |  
 | [PFF](providers/pff.ipynb) | 🟠 | ✅ | [🔗](https://drive.google.com/drive/u/0/folders/1_a_q1e9CXeEPJ3GdCv_3-rNO3gPqacfa) | 
 | SecondSpectrum | [PR #437](https://github.com/PySport/kloppy/pull/437) | ✅ |  |  
+| Signality |  | ✅ |  |  
 | SkillCorner |  | ✅ | ✅ |  
 | Sportec | ✅ | ✅ | ✅ |  
 | StatsPerform / Opta | ✅ | ✅ |  |  
