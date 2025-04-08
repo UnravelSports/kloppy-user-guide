@@ -17,18 +17,18 @@ The creation of these standardized datasets is called **"deserialization"**.
 ## Supported Providers
 | Provider | Event | Tracking | Public Data | 
 |----------|:-------:|:----------:|:---------------------:| 
-| Hawkeye (2D) |  | ✅ |  |  
-| Metrica | ✅ | ✅ | ✅ |  
-| [PFF](providers/pff.ipynb) | 🟠 | ✅ | [🔗](https://drive.google.com/drive/u/0/folders/1_a_q1e9CXeEPJ3GdCv_3-rNO3gPqacfa) | 
-| SecondSpectrum | [PR #437](https://github.com/PySport/kloppy/pull/437) | ✅ |  |  
-| Signality |  | ✅ |  |  
-| SkillCorner |  | ✅ | ✅ |  
-| Sportec | ✅ | ✅ | ✅ |  
-| StatsPerform / Opta | ✅ | ✅ |  |  
-| Tracab |  | ✅ |  |  
-| DataFactory | ✅ |  |  |  
-| StatsBomb | ✅ $^1$ |  | ✅ $^1$ |  
-| WyScout | ✅ |  | ✅ |  
+| [Hawkeye (2D)](user-guide/loading/hawkeye.ipynb) |  | ✅ |  |  
+| [Metrica](user-guide/loading/metrica.ipynb) | ✅ | ✅ | ✅ |  
+| [PFF](user-guide/loading/pff.ipynb) | 🟠 | ✅ | [🔗](https://drive.google.com/drive/u/0/folders/1_a_q1e9CXeEPJ3GdCv_3-rNO3gPqacfa) | 
+| [SecondSpectrum](user-guide/loading/secondspectrum.ipynb) | [PR #437](https://github.com/PySport/kloppy/pull/437) | ✅ |  |  
+| [Signality](user-guide/loading/signality.ipynb) |  | ✅ |  |  
+| [SkillCorner](user-guide/loading/skillcorner.ipynb) |  | ✅ | ✅ |  
+| [Sportec](user-guide/loading/sportec.ipynb) | ✅ | ✅ | ✅ |  
+| [StatsPerform / Opta](user-guide/loading/statsperform.ipynb) | ✅ | ✅ |  |  
+| [Tracab](user-guide/loading/tracab.ipynb) |  | ✅ |  |  
+| [DataFactory](user-guide/loading/datafactory.ipynb) | ✅ |  |  |  
+| [StatsBomb](user-guide/loading/statsbomb.ipynb) | ✅ $^1$ |  | ✅ $^1$ |  
+| [WyScout](user-guide/loading/wyscout.ipynb) | ✅ |  | ✅ |  
 
 ✅ Implemented  🟠 Not yet implemented 
 
