@@ -16,14 +16,14 @@ This document will outline the basics of how to get started on adding a new Even
       - [**1.3 Code Formatting**](#13-code-formatting)
       - [**1.4 Updating Documentation**](#14-updating-documentation)
       - [**1.5 Creating Pull Request**](#15-creating-pull-request)
-  - [2. Event Data](#2-event-data)
+  - [**2. Event Data**](#2-event-data)
       - [**2.1 Files**](#21-files)
-      - [**2.1.1 Loading File**](#211-loading-file)
-      - [**2.1.2 Deserialization File**](#212-deserialization-file)
-    - [3. EventDataset](#3-eventdataset)
-    - [3.1 Parsing Metadata](#31-parsing-metadata)
-    - [3.2 Parsing Events](#32-parsing-events)
-      - [Deserialization Checklist](#deserialization-checklist)
+        - [**2.1.1 Loading File**](#211-loading-file)
+        - [**2.1.2 Deserialization File**](#212-deserialization-file)
+      - [**2.2. EventDataset**](#22-eventdataset)
+        - [**2.2.1 Parsing Metadata**](#221-parsing-metadata)
+        - [**2.2.2 Parsing Events**](#222-parsing-events)
+        - [**2.2.3 Checklist**](#223-deserialization-checklist)
 - [Tracking Data](#tracking-data)
 
 #### **1.1 Deserialization**
@@ -306,9 +306,9 @@ return EventDataset(
 
 -----
 
-### 3. EventDataset
+### 2.2. EventDataset
 
-### 3.1 Parsing Metadata
+### 2.2.1 Parsing Metadata
 
 Use the meta data and event data feeds to parse:
  - `teams` as `Team` objects in a list `[home_team, away_team]`
@@ -327,7 +327,7 @@ Use the meta data and event data feeds to parse:
     - `date` (`datetime`)
     - etc.
 
-### 3.2 Parsing Events
+### 2.2.2 Parsing Events
 Before parsing the events order them by their timestamp to create a chronological ordering.
 
 Now, for each possible `EventType` create an `event` by using the built in event factory. This `EventFactory` is inherited into the `ProviderNameDeserializer` through the `EventDataDeserializer` as described [above](#212-deserialization-file).
@@ -370,7 +370,7 @@ Finally, each `event` is appended to the `events` list.
 ----
 
 
-#### Deserialization Checklist
+#### 2.2.3 Deserialization Checklist
 - Make sure the `FileLike` objects are processed correctly in the deserializer. This means opening the files in the [Loader File](#122-loader-file) using `open_as_file`. 
 - Create variables for each string representation of events, to make the code less error prone. e.g.
   - `SPORTEC_EVENT_NAME_OWN_GOAL = "OwnGoal"`
